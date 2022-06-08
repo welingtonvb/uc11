@@ -17,13 +17,14 @@ public class TesteBuscaCursos {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}
-	
+
+
 	@Test
 	public void testeNavegador() {
 		driver.get("https://informatica.sp.senai.br");
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		driver.findElement(By.id("Busca1_txtFiltro")).sendKeys("gestão");
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		driver.findElement(By.id("Busca1_btnBusca")).click();
 	}
 
@@ -34,8 +35,15 @@ public class TesteBuscaCursos {
 		driver.findElement(By.className("nav-search-input")).sendKeys("teclado");
 		driver.findElement(By.className("nav-search-btn")).click();
 	}
+*/
+/*	
+	@Test
+	public void testeNavegador() {
+		driver.get("https://www.waz.com.br/");
+		driver.findElement(By.className("fulltext-search-box")).sendKeys("teclado");
+		driver.findElement(By.className("btn-buscar")).click();
+	}	
 */	
-	
 	
 }
 
